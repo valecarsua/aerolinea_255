@@ -11,6 +11,15 @@
 	
 	<title>{{ titulo }}</title>
 
+	<script src="../js/funciones.js"></script>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+  	document.querySelector('#btnRegistrar').addEventListener('click', validateDates);
+	});
+	</script>
+
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
 
@@ -74,13 +83,13 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Departing</span>
-										<input class="form-control" type="date" required>
+										<input id = "departing" class="form-control" type="date" required>
 									</div>
 								</div>
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Returning</span>
-										<input class="form-control" type="date" required>
+										<input id = "returning"class="form-control" type="date" required>
 									</div>
 								</div>
 								<div class="col-md-2">
@@ -120,16 +129,19 @@
 								</div>
 								<div class="col-md-3">
 									<div class="form-btn">
-										<button class="submit-btn">Show flights</button>
+									<button id="btnRegistrar" type="button" class="submit-btn">Show flights</button>
 									</div>
+									<div id="error" style="color: darkmagenta;"></div>
 								</div>
 							</div>
 						</form>
+						<div id="error" style="color: cadetblue"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
